@@ -4,10 +4,11 @@
  * $Log$
  *
  */
-
+#include <AppKit.h>
 #include "DebugClient.h"
 
-#include <Application.h>
+#include <InterfaceKit.h>
+
 #include <OS.h>
 #include <time.h>
 

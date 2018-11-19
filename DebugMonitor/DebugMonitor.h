@@ -10,10 +10,13 @@
 
 #include "Tracer.h"
 #include <Application.h>
-#include <map.h>
+#include <SupportKit.h>
+#include <InterfaceKit.h>
+#include <map>
 #include <String.h>
 
-typedef map<BString, TracerWindow *> StringWindowMap; 
+
+typedef std::map<BString, TracerWindow *> StringWindowMap; 
 
 class DebugMonitorApp : public BApplication
 {

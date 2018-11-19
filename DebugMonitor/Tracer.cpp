@@ -9,7 +9,7 @@
 
 #include <TextView.h>
 #include <Application.h>
-#include <strstream.h>
+#include <strstream>
 #include <String.h>
 #include <MenuBar.h>
 #include <MenuItem.h>
@@ -94,7 +94,7 @@ bool TracerWindow::QuitRequested()
 
 const BString TracerWindow::FormatMessage(BMessage *message) const
 {
-	ostrstream os;
+	std::ostrstream os;
 	
 	if (pAttrMenu->FindItem("Timestamp")->IsMarked())
 		os << "Time: " << message->FindInt32("Time") << "| ";
@@ -117,7 +117,7 @@ const BString TracerWindow::FormatMessage(BMessage *message) const
 	if (pAttrMenu->FindItem("Message")->IsMarked())
 		os << message->FindString("Message");
 		
-	os << ends;
+	os << std::endl;
 			
 	BString s(os.str());
 	return s;

@@ -1,7 +1,8 @@
 #include "ScribbleView.h"
 
 #include "../DebugClient/DebugClient.h"
-
+#include <AppKit.h>
+#include <SupportKit.h>
 
 ScribbleView::ScribbleView(const BRect &aRect) 
 		: BView(aRect, "ScribbleView", B_FOLLOW_ALL_SIDES, 0)
@@ -9,7 +10,7 @@ ScribbleView::ScribbleView(const BRect &aRect)
 	drawing = false;
 }
 
-ostream& operator<<(ostream &os, const BPoint &p)
+std::ostream& operator<<(std::ostream &os, const BPoint &p)
 {
 	os << "(" << p.x << "," << p.y << ")";
 	return os;	
