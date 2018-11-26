@@ -23,7 +23,8 @@
 // #include <stdlib.h>
 #include <Messenger.h>
 #include <String.h>
-#include <strstream.h>
+#include <strstream>
+#include <Application.h>
 
 class DebugClient 
 {
@@ -52,8 +53,8 @@ public:
 
 #define trace(msg)                                          \
   {                                                         \
-     ostrstream _alidbgout;                                 \
-     _alidbgout << msg << ends;                             \
+     std::ostrstream _alidbgout;                                 \
+     _alidbgout << msg << std::endl;                             \
      DebugClient::handletrace(_alidbgout.str(), "Def", 1,   \
             __FILE__, __LINE__, __PRETTY_FUNCTION__);       \
   }
@@ -61,16 +62,16 @@ public:
 #define warn(expr,msg)                                      \
   if(expr)                                                  \
   {                                                         \
-     ostrstream _alidbgout;                                 \
-     _alidbgout << msg << ends;                             \
+     std::ostrstream _alidbgout;                                 \
+     _alidbgout << msg << std::endl;                             \
      DebugClient::handletrace(_alidbgout.str(), "Def", 1,   \
             __FILE__, __LINE__, __PRETTY_FUNCTION__);       \
   }
 
 #define tracex(grp,lvl,msg)                                 \
   {                                                         \
-     ostrstream _alidbgout;                                 \
-     _alidbgout << msg << ends;                             \
+     std::ostrstream _alidbgout;                                 \
+     _alidbgout << msg << std::endl;                             \
      DebugClient::handletrace(_alidbgout.str(), grp, lvl,   \
             __FILE__, __LINE__, __PRETTY_FUNCTION__);       \
   }
@@ -78,8 +79,8 @@ public:
 #define warnx(expr,grp,lvl,msg)                             \
   if(expr)                                                  \
   {                                                         \
-     ostrstream _alidbgout;                                 \
-     _alidbgout << msg << ends;                             \
+     std::ostrstream _alidbgout;                                 \
+     _alidbgout << msg << std::endl;                             \
      DebugClient::handletrace(_alidbgout.str(), grp, lvl,   \
             __FILE__, __LINE__, __PRETTY_FUNCTION__);       \
   }

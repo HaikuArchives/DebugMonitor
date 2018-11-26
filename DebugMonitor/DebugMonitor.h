@@ -8,17 +8,20 @@
 #ifndef DebugMonitor_h
 #define DebugMonitor_h
 
-#include "Tracer.h"
+#include <map>
+
 #include <Application.h>
-#include <map.h>
 #include <String.h>
 
-typedef map<BString, TracerWindow *> StringWindowMap; 
+#include "Tracer.h"
+
+
+typedef std::map<BString, TracerWindow *> StringWindowMap;
 
 class DebugMonitorApp : public BApplication
 {
 	StringWindowMap windows;
-public: 
+public:
 	DebugMonitorApp(void);
 	virtual void MessageReceived(BMessage *message);
 };
