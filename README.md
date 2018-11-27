@@ -67,14 +67,4 @@ The current incarnation of the DebugMonitor app. Build and run, does nothing unt
 
 ## Scribble sample app folder
 
-The Scribble app included is a very small app with a couple of trace statements to demonstrate the functionality. 
-
-
-
-## About me:
-My email is alister@pobox.com and this stuff may be on a web page at www.pobox.com/~alister
-
-Please let me know if this is any use to you, or if you take it anywhere better.
-
-Regards,
-Alister Lee.
+The Scribble app included is a very small app with a couple of trace statements to demonstrate the functionality.
