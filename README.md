@@ -67,4 +67,4 @@ The current incarnation of the DebugMonitor app. Build and run, does nothing unt
 
 ## Scribble sample app folder
 
-The Scribble app included is a very small app with a couple of trace statements to demonstrate the functionality.
+The Scribble app included is a very small app with a couple of trace statements to demonstrate the functionality. You'll have to build the DebugClient first and put its ```DebugClient.a``` library into the Scribble folder.
